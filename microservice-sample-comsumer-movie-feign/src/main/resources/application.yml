@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+         defaultZone: http://user:password@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+  healthcheck:
+    enable: true
+spring:
+  application:
+    name: micriservice-consumer-movie
+server:
+  port: 8012
+microservice-provider-user:
+  ribbon:
+    NFLoadbalancerRuleClassName: com.netflix.loadbalancer.RandomRule
